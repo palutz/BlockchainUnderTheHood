@@ -6,19 +6,20 @@
 
 ***
 
-- data-background : images/blockchainBckgB.jpg
-- data-background-position : left
+- data-background : images/blockchainBckgW.jpg
 
 # Blockchain
 ## under the hood
 
-</br>
 </br>
 
 A technical introduction to Blockchain 
 </br>
 for not (*so much*) technical people
 
+<br />
+Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
+
 ***
 
-
+# hello
