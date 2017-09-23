@@ -30,7 +30,6 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 
 ## Blockchain
 
-
 <div class="fragment">
 #### Distributed Ledger Tech.
 </div>
@@ -66,3 +65,18 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 <div class="fragment">
  <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
 </div>
+
+***
+
+## Blockchain
+
+**Definition** ( *from Wikipedia* )
+<div class="fragment">
+A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
+</div>
+<br />
+<div class="fragment">
+ <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
+The Bitcoin Blockchain
+</div>
+
