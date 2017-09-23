@@ -22,6 +22,47 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 
 ***
 
- <img src="images/danger.jpg" style="background: transparent; border-style: none;"  />
+<img src="images/danger.jpg" style="background: transparent; border-style: none;"  />
 
 ### BUZZWORD AREA !!!
+
+---
+
+## Blockchain
+
+
+<div class="fragment">
+#### Distributed Ledger Tech.
+</div>
+
+<div class="fragment">
+### Bitcoin
+</div>
+
+<div class="fragment">
+##### Ethereum
+</div>
+
+<div class="fragment">
+###### Smart Contract
+</div>
+
+<div class="fragment">
+##### Token
+</div>
+
+<div class="fragment">
+#### ICO 
+</div>
+
+<div class="fragment">
+### ...
+</div>
+
+---
+
+## Result?
+
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
