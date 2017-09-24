@@ -74,9 +74,12 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 <div class="fragment">
 A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
 </div>
-<br />
 <div class="fragment">
- <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
-The Bitcoin Blockchain
+A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
 </div>
+
+---
+
+### The Bitcoin Blockchain
+ <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
 
