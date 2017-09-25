@@ -103,7 +103,7 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
 
 <br/>
 <div class="fragment">
-PS: We will use the Bitcoin's Blockchain just as an example
+PS: We will use it just as an example of a ditributed public blockchain
 </div>
 
 
@@ -111,6 +111,6 @@ PS: We will use the Bitcoin's Blockchain just as an example
 
 ## Key concepts
 
-- Cryptographic functionsand hash data structure
+- Cryptographic functions and hash data structure
 - Decentralised protocol
 - Distributed ledger (P2P network)
