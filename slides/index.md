@@ -11,13 +11,13 @@
 # BLOCKCHAIN
 ## under the hood
 
-</br>
+<br/>
 
 A technical introduction to Blockchain 
-</br>
+<br/>
 for not (*so*) technical people
 
-<br />
+<br/>
 Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 
 ***
@@ -39,7 +39,7 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 </div>
 
 <div class="fragment">
-#### Ethereum
+### Ethereum
 </div>
 
 <div class="fragment">
@@ -70,22 +70,47 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 
 ## Blockchain
 
-**Definition(s)** ( *from Wikipedia* )
+Definition(s) ( *from Wikipedia* )
+
 <div class="fragment">
-A **blockchain** is a continuously growing list of records, called **blocks**, which are linked and secured using **cryptography**.
+A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
 </div>
+
+<br/>
 <div class="fragment">
-A **blockchain** can serve as "an open, **distributed** ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
+A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
 </div>
+
+<br/>
+
+<br/>
 <div class="fragment">
-For use as a distributed ledger a blockchain is typically managed by a **peer-to-peer** network collectively adhering to a **protocol** for validating new blocks.
+PS: it's a pretty "old" concept (despite the recent hype): you can track it back to a paper by Haber and Stornetta in 1991
 </div>
+
+[//]: # "For use as a distributed ledger a blockchain is typically managed by a **peer-to-peer** network collectively adhering to a **protocol** for validating new blocks.)"
+
+---
+
+
+ <img src="images/walkonthewildside.png" style="background: transparent; border-style: none;"  />
+
 
 ---
 
 ### The Bitcoin Blockchain
  <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
 
+<br/>
+<div class="fragment">
+PS: We will use the Bitcoin's Blockchain just as an example
+</div>
+
+
 ---
 
-## Keys of 
+## Key concepts
+
+- Cryptographic functionsand hash data structure
+- Decentralised protocol
+- Distributed ledger (P2P network)
