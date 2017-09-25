@@ -39,7 +39,7 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 </div>
 
 <div class="fragment">
-##### Ethereum
+#### Ethereum
 </div>
 
 <div class="fragment">
@@ -70,12 +70,15 @@ Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
 
 ## Blockchain
 
-**Definition** ( *from Wikipedia* )
+**Definition(s)** ( *from Wikipedia* )
 <div class="fragment">
-A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
+A **blockchain** is a continuously growing list of records, called **blocks**, which are linked and secured using **cryptography**.
 </div>
 <div class="fragment">
-A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
+A **blockchain** can serve as "an open, **distributed** ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
+</div>
+<div class="fragment">
+For use as a distributed ledger a blockchain is typically managed by a **peer-to-peer** network collectively adhering to a **protocol** for validating new blocks.
 </div>
 
 ---
@@ -83,3 +86,6 @@ A blockchain can serve as "an open, distributed ledger that can record transacti
 ### The Bitcoin Blockchain
  <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
 
+---
+
+## Keys of 
