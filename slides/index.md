@@ -242,8 +242,8 @@ The main benefit of decentralized networks is the absence of a single point of f
 
 ## Downsides
 
+- write decentralized app is a bit tricky: quite new theory, not so much experience, lack of proper/stable tools.
 - smart contracts could be faulty or buggy (DAO hack, ICO hack, ...)
-- write decentralized app is quite difficult: quite new theory, not so much experience, lack of proper/stable tools.
 - if a mistake is made there is no other way to correct it ithan with a Harf Fork.
 
 
