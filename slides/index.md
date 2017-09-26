@@ -210,3 +210,11 @@ PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Bl
 - Cryptographic functions and hash data structure
 - Decentralised protocol
 - Distributed ledger (P2P network)
+
+---
+
+### Network types
+
+<img src="images/network2.png" style="background: transparent; border-style: none;"  />
+
+
