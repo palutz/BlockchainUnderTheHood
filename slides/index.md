@@ -257,6 +257,12 @@ this is the tricky part
 <div class="fragment" >
 - It's efficiently computable (eg. O(n))
 </div>
+  
+<br/>
+
+<div class="fragment" >
+PS: math function = I don't need to trust someone. It's just MATH!
+</div>
 
 ---
 
@@ -321,7 +327,7 @@ There is no FEASIBLE way to understand the input (x) of a **hash** function H fr
   
 <br/>
 
-**Application**: commitment. 
+**Application**: commitment. Committing to a value or a message.
 
 ' A commitment is the digital analog of taking a value, sealing it in an envelope, and putting that envelope out on the table where everyone can see it.
 
@@ -335,13 +341,76 @@ There is no FEASIBLE way to understand the input (x) of a **hash** function H fr
   
 <br/>
 
-This is the most complicated one. To make it really simple, you cannot forecast the next output value of the hash
+This is the most complicated one.
+Simple explanation: if someone wants to target our hash function to “force” an output, or to produce a predetermined value, there is no other way than trying all the possible inputs.
+
+**Application**: Search puzzle. 
+
+' a mathematical problem which requires searching a very large space in order to find the solution. In particular, a search puzzle has no shortcuts.
 
 <br/>
 
-**Application**: commitment. 
+***
 
-' A commitment is the digital analog of taking a value, sealing it in an envelope, and putting that envelope out on the table where everyone can see it.
+## Hash Data structure
+
+<br/>
+
+How we store data using our cryptohash functions
+
+<br/>
+
+---
+
+### Hash Data pointer
+
+<br/>
+
+A hash pointer is simply a pointer to where some information is stored together with a cryptographic hash of the information
+
+ <img src="images/hashpointer.png" style="background: transparent; border-style: none;"  />
+
+' a regular pointer gives you a way to retrieve the information
+' a hash pointer also gives you a way to verify that the information has not changed.
+
+---
+
+### Block chain
+
+<br/>
+
+A block chain is “simply” a linked list using hash pointers
+
+ <img src="images/hashlist.png" style="background: transparent; border-style: none;"  />
+
+' This data structure is tamper-evident 
+
+---
+
+### Merkle Tree
+
+<br/>
+
+A binary tree with hash pointer is called Merkle Tree
+
+ <img src="images/merkletree.png" style="background: transparent; border-style: none;"  />
+
+' Proof of membership: with a Merkle tree it's quite easy to have a concise proof of membership (not feasible with the bock chain). It's enough to check a log(n) node to verify if a node is part of the tree.
+
+---
+
+Merkle Tree and block chain. Remember anything?
+
+
+<div class="fragment">
+<img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
+
+<br/>
+
+### The Blockchain!
+
+</div>
+
 
 ***
 
