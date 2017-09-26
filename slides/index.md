@@ -158,20 +158,18 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
   The effort to collect transactions is distributed across different trusted parties
 </div>
 
+<div class="fragment">
+  We need a way to protect and keep updated all the ledgers and to incentivize good behavior amongst the parties
+</div>
+
+---
+
+### Step by step...
+
 ---
 
 
-
-
-
-
-
-
-
-
-
  <img src="images/walkonthewildside.png" style="background: transparent; border-style: none;"  />
-
 
 ---
 
@@ -180,7 +178,7 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
 
 <br/>
 <div class="fragment">
-PS: We will use it just as an example of a ditributed public blockchain
+PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Blockchain
 </div>
 
 
