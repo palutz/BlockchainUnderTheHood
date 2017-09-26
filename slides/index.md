@@ -18,7 +18,7 @@ A technical introduction to Blockchain
 for not (*so*) technical people
 
 <br/>
-Stefano Paluello  [@palutz](http://www.twitter.com/palutz)
+Stefano Paluello  [@21.co/palutz](https://21.co/palutz/)
 
 ***
 
@@ -226,15 +226,129 @@ The main benefit of decentralized networks is the absence of a single point of f
 
 ## Hash and crypto
 
+<br/>
+
+<br/>
+
+<br/>
+
+<div class="fragment" >
+#### Disclaimer:
+this is the tricky part
+</div>
+
 ---
 
+<img src="images/runaway.png" width="50%" style="background: transparent; border-style: none;"  />
+
+***
+
+### Hash function
+
+
+*Hash* function is a mathematical function with 3 properties:
+
+<div class="fragment" >
+- Input can be ANY size
+</div>
+<div class="fragment" >
+- It produces a fixed size output (eg. 256 bit)
+</div>
+<div class="fragment" >
+- It's efficiently computable (eg. O(n))
+</div>
+
+---
+
+### Cryptographic Hash function
+
+A *Cryptographic Hash* function has 3 additional feature:
+<div class="fragment" >
+- Collision resistance
+</div>
+<div class="fragment" >
+- Hiding
+</div>
+<div class="fragment" >
+- Puzzle-friendly
+</div>
+
+---
+
+### Here we go again... 
+
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
+
+---
+
+### Please
+
+<div class="fragment">
+ <img src="images/justhodl.jpg" style="background: transparent; border-style: none;"  />
+</div>
+
+---
+
+## Let me explain
+  
+<br/>
+
+### Collision resistance 
+
+<br/>
+
+It's INFEASIBLE to find two values with the same hash
+  
+<br/>
+
+with SHA-256 we need to try 2^130 random inputs to achieve a 99.8% chance that at least 2 items will collide
+
+**Application**: message digest 
+
+---
+
+## Let me explain 2
+
+<br/>
+
+### Hiding
+  
+<br/>
+
+There is no FEASIBLE way to understand the input (x) of a **hash** function H from its output (or cypher Y)
+  
+<br/>
+
+**Application**: commitment. 
+
+' A commitment is the digital analog of taking a value, sealing it in an envelope, and putting that envelope out on the table where everyone can see it.
+
+---
+
+## Let me explain 3
+
+<br/>
+
+### Puzzle friendly
+  
+<br/>
+
+This is the most complicated one. To make it really simple, you cannot forecast the next output value of the hash
+
+<br/>
+
+**Application**: commitment. 
+
+' A commitment is the digital analog of taking a value, sealing it in an envelope, and putting that envelope out on the table where everyone can see it.
 
 ***
 
 ## Benefits of Blockchain
 
 - **Immutability** – A third party cannot make any changes to data.
-- **Corruption & tamper proof** – Apps are based on a network formed around the principle of consensus, making censorship unfeasible.
+- **Corruption & tamper proof** – Apps are based on a network formed around the principle of consensus, making censorship infeasible.
 - **Secure** – No central point of failure and secured using cryptography, applications are well protected against hacking attacks and fraudulent activities.
 - **Zero downtime** – Apps never go down and can never be switched off (sort of).
 
