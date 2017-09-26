@@ -136,7 +136,7 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
 
 <div class="fragment">
 ### Contract
-  Set of rules and conditions
+  Set of rules and conditions used with transactions
 </div>
 
 <div class="fragment">
@@ -174,13 +174,34 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
 ---
 
 ### The Bitcoin Blockchain
- <img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
+
+<img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
 
 <br/>
 <div class="fragment">
 PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Blockchain
 </div>
 
+---
+
+<img src="images/blockchain-privacy.png" style="background: transparent; border-style: none;"  />
+
+<br/>
+
+(credit: MIT Technology Review)
+
+***
+
+<img src="images/godeeper.jpg" style="background: transparent; border-style: none;"  />
+
+---
+
+### How Blockchain works... 
+
+<img src="images/blockWork.png" style="background: transparent; border-style: none;"  />
+
+<br/>
+(credit: PwC)
 
 ---
 
