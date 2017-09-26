@@ -222,3 +222,29 @@ PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Bl
 The main benefit of decentralized networks is the absence of a single point of failure.
 </div>
 
+---
+
+## Hash and crypto
+
+---
+
+
+***
+
+## Benefits of Blockchain
+
+- **Immutability** – A third party cannot make any changes to data.
+- **Corruption & tamper proof** – Apps are based on a network formed around the principle of consensus, making censorship unfeasible.
+- **Secure** – No central point of failure and secured using cryptography, applications are well protected against hacking attacks and fraudulent activities.
+- **Zero downtime** – Apps never go down and can never be switched off (sort of).
+
+---
+
+## Downsides
+
+- smart contracts could be faulty or buggy (DAO hack, ICO hack, ...)
+- write decentralized app is quite difficult: quite new theory, not so much experience, lack of proper/stable tools.
+- if a mistake is made there is no other way to correct it ithan with a Harf Fork.
+
+
+
