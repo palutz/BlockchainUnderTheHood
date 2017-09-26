@@ -198,10 +198,11 @@ PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Bl
 
 ### How Blockchain works... 
 
+<div class="fragment">
 <img src="images/blockWork.png" style="background: transparent; border-style: none;"  />
-
 <br/>
 (credit: PwC)
+</div>
 
 ---
 
@@ -214,7 +215,10 @@ PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Bl
 ---
 
 ### Network types
+(Centralized, Distributed, Decentralized)
+<img src="images/network2.png" width="70%" style="background: transparent; border-style: none;"  />
 
-<img src="images/network2.png" style="background: transparent; border-style: none;"  />
-
+<div class="fragment" >
+The main benefit of decentralized networks is the absence of a single point of failure.
+</div>
 
