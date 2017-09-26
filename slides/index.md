@@ -92,6 +92,83 @@ PS: it's a pretty "old" concept (despite the recent hype): you can track it back
 
 ---
 
+## Still ... ?
+
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
+
+***
+
+## Let's come back to...
+
+<br />
+
+<img src="images/legoduplo.png" width="50%" style="background: transparent; border-style: none;"  />
+
+<br />
+
+## the basics !!!
+
+---
+
+### Basics 1
+
+<br />
+
+<div class="fragment">
+### Asset
+  Everything (physical or virtual) that we own and could be exchanged.
+</div>
+
+<br />
+
+<div class="fragment">
+### Transaction
+  The action of changing assets ownership
+</div>
+
+---
+
+### Basics 2
+
+<br />
+
+<div class="fragment">
+### Contract
+  Set of rules and conditions
+</div>
+
+<div class="fragment">
+### Ledger
+  Book-keeping track of everything happening in our system 
+</div>
+
+<div class="fragment">
+### Intermediary
+  A, eventually, third party facilitating or witnessing the transaction
+</div>
+
+---
+
+### A step further...
+
+<div class="fragment">
+### Distributed ledger
+  The effort to collect transactions is distributed across different trusted parties
+</div>
+
+---
+
+
+
+
+
+
+
+
+
+
 
  <img src="images/walkonthewildside.png" style="background: transparent; border-style: none;"  />
 
