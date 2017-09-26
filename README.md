@@ -1,4 +1,4 @@
 
 #  Blockchain under the hood
 
-[Presentation](https://palutz.github.io/BlockchainUnderTheHood/)
+[Presentation on gh-pages](https://palutz.github.io/BlockchainUnderTheHood/)
