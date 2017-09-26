@@ -1,0 +1,411 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Blockchain under the hood</title>
+    <meta name="description" content="Fast paced introduction to the technologies underneath the Blockchain">
+    <meta name="author" content="Stefano Paluello">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="//code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="fsharp.formatting/styles/deedle.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="fsharp.formatting/styles/tips.js" type="text/javascript"></script>
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/fsreveal.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script language="javascript" type="text/javascript">
+        function init()
+        {
+            websocket = new WebSocket("ws://"+window.location.host+"/websocket");
+            websocket.onmessage = function(evt) { location.reload(); };
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="images/blockchainBckgW.jpg">
+<h1>BLOCKCHAIN</h1>
+<h2>under the hood</h2>
+<br/>
+<p>A technical introduction to Blockchain
+<br/>
+for not (<em>so</em>) technical people</p>
+<p><br/>
+Stefano Paluello  <a href="https://21.co/palutz/">@21.co/palutz</a></p>
+</section>
+<section >
+<section >
+<img src="images/danger.jpg" style="background: transparent; border-style: none;"  />
+<h3>BUZZWORD AREA !!!</h3>
+</section>
+<section >
+<h2>Blockchain</h2>
+<div class="fragment">
+<h4>Distributed Ledger Tech.</h4>
+</div>
+<div class="fragment">
+<h3>Bitcoin</h3>
+</div>
+<div class="fragment">
+<h3>Ethereum</h3>
+</div>
+<div class="fragment">
+<h6>Smart Contract</h6>
+</div>
+<div class="fragment">
+<h5>Token</h5>
+</div>
+<div class="fragment">
+<h4>ICO</h4>
+</div>
+<div class="fragment">
+<h3>...</h3>
+</div>
+</section>
+<section >
+<h2>Result?</h2>
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Blockchain</h2>
+<p>Definition(s) ( <em>from Wikipedia</em> )</p>
+<div class="fragment">
+A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
+</div>
+<br/>
+<div class="fragment">
+A blockchain can serve as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way."
+</div>
+<br/>
+<br/>
+<div class="fragment">
+PS: it's a pretty "old" concept (despite the recent hype): you can track it back to a paper by Haber and Stornetta in 1991
+</div>
+</section>
+<section >
+<h2>Still ... ?</h2>
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Let's come back to...</h2>
+<br />
+<img src="images/legoduplo.png" width="50%" style="background: transparent; border-style: none;"  />
+<br />
+<h2>the basics !!!</h2>
+</section>
+<section >
+<h3>Basics 1</h3>
+<br />
+<div class="fragment">
+<h3>Asset</h3>
+<p>Everything (physical or virtual) that we own and could be exchanged.
+</div></p>
+<br />
+<div class="fragment">
+<h3>Transaction</h3>
+<p>The action of changing assets ownership
+</div></p>
+</section>
+<section >
+<h3>Basics 2</h3>
+<br />
+<div class="fragment">
+<h3>Contract</h3>
+<p>Set of rules and conditions used with transactions
+</div></p>
+<div class="fragment">
+<h3>Ledger</h3>
+<p>Book-keeping track of everything happening in our system
+</div></p>
+<div class="fragment">
+<h3>Intermediary</h3>
+<p>A, eventually, third party facilitating or witnessing the transaction
+</div></p>
+</section>
+<section >
+<h3>A step further...</h3>
+<div class="fragment">
+<h3>Distributed ledger</h3>
+<p>The effort to collect transactions is distributed across different trusted parties
+</div></p>
+<div class="fragment">
+  We need a way to protect and keep updated all the ledgers and to incentivize good behavior amongst the parties
+</div>
+</section>
+<section >
+<h3>Step by step...</h3>
+</section>
+<section >
+<p><img src="images/walkonthewildside.png" style="background: transparent; border-style: none;"  /></p>
+</section>
+<section >
+<h3>The Bitcoin Blockchain</h3>
+<img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
+<br/>
+<div class="fragment">
+PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Blockchain
+</div>
+</section>
+<section >
+<img src="images/blockchain-privacy.png" style="background: transparent; border-style: none;"  />
+<br/>
+<p>(credit: MIT Technology Review)</p>
+</section>
+</section>
+<section >
+<section >
+<img src="images/godeeper.jpg" style="background: transparent; border-style: none;"  />
+</section>
+<section >
+<h3>How Blockchain works...</h3>
+<div class="fragment">
+<img src="images/blockWork.png" style="background: transparent; border-style: none;"  />
+<br/>
+(credit: PwC)
+</div>
+</section>
+<section >
+<h2>Key concepts</h2>
+<ul>
+<li>Cryptographic functions and hash data structure</li>
+<li>Decentralised protocol</li>
+<li>Distributed ledger (P2P network)</li>
+</ul>
+</section>
+<section >
+<h3>Network types</h3>
+<p>(Centralized, Distributed, Decentralized)
+<img src="images/network2.png" width="70%" style="background: transparent; border-style: none;"  /></p>
+<div class="fragment" >
+The main benefit of decentralized networks is the absence of a single point of failure.
+</div>
+</section>
+<section >
+<h2>Hash and crypto</h2>
+<br/>
+<br/>
+<br/>
+<div class="fragment" >
+<h4>Disclaimer:</h4>
+<p>this is the tricky part
+</div></p>
+</section>
+<section >
+<img src="images/runaway.png" width="50%" style="background: transparent; border-style: none;"  />
+</section>
+</section>
+<section >
+<section >
+<h3>Hash function</h3>
+<p><em>Hash</em> function is a mathematical function with 3 properties:</p>
+<div class="fragment" >
+- Input can be ANY size
+</div>
+<div class="fragment" >
+- It produces a fixed size output (eg. 256 bit)
+</div>
+<div class="fragment" >
+- It's efficiently computable (eg. O(n))
+</div>
+<br/>
+<div class="fragment" >
+PS: math function = I don't need to trust someone. It's just MATH!
+</div>
+</section>
+<section >
+<h3>Cryptographic Hash function</h3>
+<p>A <em>Cryptographic Hash</em> function has 3 additional feature:
+<div class="fragment" >
+- Collision resistance
+</div>
+<div class="fragment" >
+- Hiding
+</div>
+<div class="fragment" >
+- Puzzle-friendly
+</div></p>
+</section>
+<section >
+<h3>Here we go again...</h3>
+<div class="fragment">
+ <img src="images/confusedTravolta.gif" style="background: transparent; border-style: none;"  />
+</div>
+</section>
+<section >
+<h3>Please</h3>
+<div class="fragment">
+ <img src="images/justhodl.jpg" style="background: transparent; border-style: none;"  />
+</div>
+</section>
+<section >
+<h2>Let me explain</h2>
+<br/>
+<h3>Collision resistance</h3>
+<br/>
+<p>It's INFEASIBLE to find two values with the same hash</p>
+<br/>
+<p>with SHA-256 we need to try 2^130 random inputs to achieve a 99.8% chance that at least 2 items will collide</p>
+<p><strong>Application</strong>: message digest</p>
+</section>
+<section >
+<h2>Let me explain 2</h2>
+<br/>
+<h3>Hiding</h3>
+<br/>
+<p>There is no FEASIBLE way to understand the input (x) of a <strong>hash</strong> function H from its output (or cypher Y)</p>
+<br/>
+<p><strong>Application</strong>: commitment. Committing to a value or a message.</p>
+<aside class="notes">
+A commitment is the digital analog of taking a value, sealing it in an envelope, and putting that envelope out on the table where everyone can see it.<br/>
+</aside>
+</section>
+<section >
+<h2>Let me explain 3</h2>
+<br/>
+<h3>Puzzle friendly</h3>
+<br/>
+<p>This is the most complicated one.
+Simple explanation: if someone wants to target our hash function to “force” an output, or to produce a predetermined value, there is no other way than trying all the possible inputs.</p>
+<p><strong>Application</strong>: Search puzzle.</p>
+<aside class="notes">
+a mathematical problem which requires searching a very large space in order to find the solution. In particular, a search puzzle has no shortcuts.<br/>
+</aside>
+<br/>
+</section>
+</section>
+<section >
+<section >
+<h2>Hash Data structure</h2>
+<br/>
+<p>How we store data using our cryptohash functions</p>
+<br/>
+</section>
+<section >
+<h3>Hash Data pointer</h3>
+<br/>
+<p>A hash pointer is simply a pointer to where some information is stored together with a cryptographic hash of the information</p>
+<p><img src="images/hashpointer.png" style="background: transparent; border-style: none;"  /></p>
+<aside class="notes">
+a regular pointer gives you a way to retrieve the information<br/>
+a hash pointer also gives you a way to verify that the information has not changed.<br/>
+</aside>
+</section>
+<section >
+<h3>Block chain</h3>
+<br/>
+<p>A block chain is “simply” a linked list using hash pointers</p>
+<p><img src="images/hashlist.png" style="background: transparent; border-style: none;"  /></p>
+<aside class="notes">
+This data structure is tamper-evident <br/>
+</aside>
+</section>
+<section >
+<h3>Merkle Tree</h3>
+<br/>
+<p>A binary tree with hash pointer is called Merkle Tree</p>
+<p><img src="images/merkletree.png" style="background: transparent; border-style: none;"  /></p>
+<aside class="notes">
+Proof of membership: with a Merkle tree it's quite easy to have a concise proof of membership (not feasible with the bock chain). It's enough to check a log(n) node to verify if a node is part of the tree.<br/>
+</aside>
+</section>
+<section >
+<p>Merkle Tree and block chain. Remember anything?</p>
+<div class="fragment">
+<img src="images/bitcoinBlockchain.png" style="background: transparent; border-style: none;"  />
+<br/>
+<h3>The Blockchain!</h3>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Benefits of Blockchain</h2>
+<ul>
+<li><strong>Immutability</strong> – A third party cannot make any changes to data.</li>
+<li><strong>Corruption &amp; tamper proof</strong> – Apps are based on a network formed around the principle of consensus, making censorship infeasible.</li>
+<li><strong>Secure</strong> – No central point of failure and secured using cryptography, applications are well protected against hacking attacks and fraudulent activities.</li>
+<li><strong>Zero downtime</strong> – Apps never go down and can never be switched off (sort of).</li>
+</ul>
+</section>
+<section >
+<h2>Downsides</h2>
+<ul>
+<li>write decentralized app is a bit tricky: quite new theory, not so much experience, lack of proper/stable tools.</li>
+<li>smart contracts could be faulty or buggy (DAO hack, ICO hack, ...)</li>
+<li>if a mistake is made there is no other way to correct it ithan with a Harf Fork.</li>
+</ul>
+</section>
+</section>
+
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Add the nohighlight class and data-noescape attribute to code elements that have already been formatted by FSharp.Formatting
+        $('pre.highlighted code').addClass('nohighlight').attr('data-noescape', '');
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
+</body>
+</html>
+
