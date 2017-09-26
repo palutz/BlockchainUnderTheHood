@@ -85,7 +85,7 @@ A blockchain can serve as "an open, distributed ledger that can record transacti
 
 <br/>
 <div class="fragment">
-PS: it's a pretty "old" concept (despite the recent hype): you can track it back to a paper by Haber and Stornetta in 1991
+PS: it's a pretty "old" concept (despite the recent hype) you can track it back to a paper by Haber and Stornetta in 1991
 </div>
 
 [//]: # "For use as a distributed ledger a blockchain is typically managed by a **peer-to-peer** network collectively adhering to a **protocol** for validating new blocks.)"
