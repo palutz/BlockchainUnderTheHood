@@ -216,7 +216,7 @@ PS: Don't be scared! We will use it just as an example of a ditributed PUBLIC Bl
 
 ### Network types
 (Centralized, Distributed, Decentralized)
-<img src="images/network2.png" width="70%" style="background: transparent; border-style: none;"  />
+<img src="images/Network2.png" width="70%" style="background: transparent; border-style: none;"  />
 
 <div class="fragment" >
 The main benefit of decentralized networks is the absence of a single point of failure.
@@ -312,6 +312,8 @@ It's INFEASIBLE to find two values with the same hash
 with SHA-256 we need to try 2^130 random inputs to achieve a 99.8% chance that at least 2 items will collide
 
 **Application**: message digest 
+
+' 2^32 * 2^32 * 2^32 * 2^32  to achieve 99.8% to have a conflict
 
 ---
 
@@ -430,4 +432,24 @@ Merkle Tree and block chain. Remember anything?
 - if a mistake is made there is no other way to correct it ithan with a Harf Fork.
 
 
+***
 
+## Possible scenarios?
+
+
+' Digital Identity
+' Distributed Data Storage
+' Digital Voting
+' Decentralized Notary
+' Smart Contract 
+' Smart Property (IFTTT If this then that)
+' REAL sharing economy (Uber on the Blockchain, AirBnb is actually researching it)
+' IOT, Smart Appliances, Smart sensors
+' Supply chain (food, goods, diamonds, etc, etc )
+' Healthcare
+' Music ( doing it)
+' Government 
+
+---
+
+# Q&A
