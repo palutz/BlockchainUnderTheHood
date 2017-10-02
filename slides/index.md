@@ -372,6 +372,9 @@ A hash pointer is simply a pointer to where some information is stored together 
 
  <img src="images/hashpointer.png" style="background: transparent; border-style: none;"  />
 
+([credit: "BitcoinBook" by Princeton University](http://bitcoinbook.cs.princeton.edu/))
+
+
 ' a regular pointer gives you a way to retrieve the information
 ' a hash pointer also gives you a way to verify that the information has not changed.
 
@@ -379,11 +382,12 @@ A hash pointer is simply a pointer to where some information is stored together 
 
 ### Block chain
 
-<br/>
-
 A block chain is “simply” a linked list using hash pointers
 
  <img src="images/hashlist.png" style="background: transparent; border-style: none;"  />
+
+([credit: "BitcoinBook" by Princeton University](http://bitcoinbook.cs.princeton.edu/))
+
 
 ' This data structure is tamper-evident 
 
@@ -391,11 +395,12 @@ A block chain is “simply” a linked list using hash pointers
 
 ### Merkle Tree
 
-<br/>
-
 A binary tree with hash pointer is called Merkle Tree
 
  <img src="images/merkletree.png" style="background: transparent; border-style: none;"  />
+
+([credit: "BitcoinBook" by Princeton University](http://bitcoinbook.cs.princeton.edu/))
+
 
 ' Proof of membership: with a Merkle tree it's quite easy to have a concise proof of membership (not feasible with the bock chain). It's enough to check a log(n) node to verify if a node is part of the tree.
 
